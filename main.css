@@ -1,0 +1,196 @@
+/*Main CSS*/
+
+/** {
+	font-family: 'Audiowide', cursive;
+}
+*/
+/** {
+	font-family: 'Source Sans Pro', sans-serif;
+}*/
+* {
+	font-family: 'Muli', sans-serif;
+}
+
+html, body { overflow-x: hidden; }
+
+.container-fluid {
+  margin-right: auto;
+  margin-left: auto;
+/*  max-width: 1300px; /* or 950px */*/
+  padding:0px;
+}
+
+.col-centered{
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.top-project{
+	height: 15%;
+}
+.row-space {
+	margin-top: 20px;
+}
+.space-bottom{
+	margin-bottom: 20px;
+}
+.discovery {
+	margin-top: 20px;
+	margin-bottom: 40px;
+}
+#profileImage{
+	margin-top:10px;
+	border-radius: 50%;
+}
+
+img {
+	width: 100%;
+/*   max-height: 100%;*/
+}
+
+video { 
+    min-width: 100%; 
+    min-height: 100%;
+    width: auto; 
+    height: auto; 
+    z-index: 100;
+    object-fit: contain;
+}
+
+.burp-vid{
+	margin-top: 10px;
+}
+
+.project-vid {
+	width: 100%;
+	height: 100%;
+}
+
+.vr-trainer-img{
+	width: 50%;
+}
+.project-vid-mid {
+	width: 100%;
+	height: 75%;
+}
+.project-text {
+    position: relative;
+    top: 50%; 
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+}
+.swipe-text{
+	padding-left: 20px;
+}
+.peat-text{
+	padding-right: 20px;
+}
+.project-vid-container{
+    position: relative;
+    top: 50%; 
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+}
+
+.inverse {
+	color: white;
+	background-color: black;
+}
+.project {
+	height: 100%;
+}
+.video-container {
+	display: inline-block;
+	z-index: 99;
+}
+.project-overlay-text {
+	margin-left: 10%;
+	width: 50%;
+	z-index: 100;
+	position: absolute;
+}
+
+.center{
+	text-align:center;
+}
+.socialIconRow{
+	margin-top: 20px;
+}
+.social-box{
+	overflow:visible;
+	height: 30px;
+}
+.socialLink{
+	width: 30px;
+	height: 100%;
+}
+.filler{
+	height: 40%;
+	background-color: black;
+}
+.filler-white{
+	height: 25%;
+	background-color: white;
+}
+.filler-bottom{
+	background-color: black;
+	height:70px;
+}
+.description-text{
+	vertical-align: top;
+}
+
+ul {
+	list-style-type: none;
+}
+
+.bottom-profile {
+	margin-bottom: 10px;
+	height: 50px;
+}
+.social-row-bottom{
+	margin-bottom: 10px;
+}
+
+.bottom-project {
+	height: 30%;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+/*li {
+
+}*/
+
+.spooks {
+	height: 100%;
+	width: 100%;
+}
+
+.spooks-row{
+	height: 50%;
+}
+.spooks-div{
+ height: 50%;
+}
+
+
+
+@media (max-width: 750px) {
+	.bottom-project{
+		margin-top: 25px;
+	}
+	.socialLink {
+		height: 30px;
+		width: 30px;
+	}
+	.project {
+		height: 300px;
+	}
+	video {
+		height: 50%;
+	}
+	.filler {
+		height: 300px;
+	}
+}

@@ -42,6 +42,11 @@ html, body { overflow-x: hidden; }
 	margin-top:10px;
 	border-radius: 50%;
 }
+#profileImageTrail{
+	margin-top:10px;
+/*	border-radius: 50%;*/
+/*	width: 50%;*/
+}
 
 img {
 	width: 100%;

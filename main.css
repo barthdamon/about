@@ -122,13 +122,30 @@ video {
 	padding-left: 0px;
 	margin-top: 20px;
 }
+.discordIconRow{
+	margin-top: 8px;
+}
+.landingIntro h4{
+	margin-bottom: 0px;
+}
+.landingSocialRow{
+	margin-top: 56px;
+	margin-bottom: 16px;
+	text-align: center;
+}
+.landingSocialLink{
+	display: inline-block;
+	margin: 0px 24px;
+}
 .social-box{
 	overflow:visible;
 	height: 30px;
 }
 .socialLink{
+	display: block;
 	width: 25px;
-	height: 75%;
+	height: 25px;
+	object-fit: contain;
 }
 .filler{
 	height: 40%;

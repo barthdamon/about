@@ -125,8 +125,7 @@ video {
 .discordIconRow{
 	margin-top: 8px;
 }
-.landingLinks a{
-	display: block;
+.landingLinkItem{
 	font-size: 18px;
 	margin-top: 12px;
 }

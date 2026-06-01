@@ -51,7 +51,7 @@ body.in-progress {
 	border-radius: 50%;
 }
 #profileImageTrail{
-/*	margin-top:10px;*/
+	padding-top: 50px;
 /*	border-radius: 50%;*/
 /*	width: 50%;*/
 }
@@ -207,8 +207,10 @@ ul {
 }
 
 
-
 @media (max-width: 750px) {
+	#profileImageTrail{
+		padding-top: 50px;
+	}
 	.bottom-project{
 		margin-top: 25px;
 	}

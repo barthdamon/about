@@ -10,8 +10,17 @@ var vid_h_orig;
 
 jQuery(function() { // runs after DOM has loaded
 
+    if (!jQuery('#video-viewport').length) {
+        return;
+    }
+
     vid_w_orig = parseInt(jQuery('video').attr('width'));
     vid_h_orig = parseInt(jQuery('video').attr('height'));
+
+    if (!vid_w_orig || !vid_h_orig) {
+        return;
+    }
+
     $('#debug').append("<p>DOM loaded</p>");
 
     jQuery(window).resize(function () { resizeToCover(); });
@@ -39,3 +48,63 @@ function resizeToCover() {
     jQuery('#video-viewport').scrollLeft((jQuery('video').width() - jQuery(window).width()) / 2);
     jQuery('#video-viewport').scrollTop((jQuery('video').height() - jQuery(window).height()) / 2);
 };
+
+jQuery(function() {
+    document.querySelectorAll('.videoAutoplayWrap').forEach(function(wrap) {
+        var video = wrap.querySelector('video');
+        var button = wrap.querySelector('.videoPlayButton');
+
+        if (!video || !button) {
+            return;
+        }
+
+        function hideButton() {
+            button.hidden = true;
+        }
+
+        function showButton() {
+            if (video.paused) {
+                button.hidden = false;
+            }
+        }
+
+        function tryPlay() {
+            video.muted = true;
+            video.setAttribute('muted', '');
+
+            var playAttempt;
+
+            try {
+                playAttempt = video.play();
+            } catch (error) {
+                showButton();
+                return;
+            }
+
+            if (playAttempt && typeof playAttempt.then === 'function') {
+                playAttempt.then(hideButton).catch(showButton);
+            }
+        }
+
+        video.addEventListener('playing', hideButton);
+        video.addEventListener('play', hideButton);
+        video.addEventListener('pause', function() {
+            if (!video.ended) {
+                showButton();
+            }
+        });
+
+        button.addEventListener('click', function() {
+            hideButton();
+            tryPlay();
+        });
+
+        tryPlay();
+
+        setTimeout(function() {
+            if (video.paused || video.readyState < 2) {
+                showButton();
+            }
+        }, 1200);
+    });
+});
